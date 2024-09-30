@@ -6,24 +6,9 @@ using System.Threading.Tasks;
 
 namespace TicketClassLibrary
 {
-    public class Car
+    public class Car : Vehicle
     {
-        //instansfelter
-        private string _licensePlate;
-        private DateTime _date;
-
-        //properties
-        public string Licenseplate
-        {
-            get { return _licensePlate; }
-            set { _licensePlate = value; }  
-        }
-
-        public DateTime Date
-        {
-            get { return _date; }
-            set { _date = value; }
-        }
+        
 
         //Constructor
         /// <summary>
@@ -31,10 +16,9 @@ namespace TicketClassLibrary
         /// </summary>
         /// <param name="licenseplate"></param>
         /// <param name="date"></param>
-        public Car(string licensePlate, DateTime date)
+        public Car(string licensePlate, DateTime date): base(licensePlate, date)
         {
-            _licensePlate = licensePlate;
-            _date = date;
+           
         }
 
         // Methoder
@@ -42,7 +26,7 @@ namespace TicketClassLibrary
         /// Prismetode for car.price
         /// </summary>
         /// <returns> 240 </returns>
-        public double Price()
+        public override double Price()
         {
             return 240.0;
         }
@@ -51,7 +35,7 @@ namespace TicketClassLibrary
         /// VehicleType metode for car.VehicleType
         /// </summary>
         /// <returns> Car </returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }

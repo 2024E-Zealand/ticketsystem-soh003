@@ -6,48 +6,26 @@ using System.Threading.Tasks;
 
 namespace TicketClassLibrary
 {
-    public class MC
+    public class MC : Vehicle
     {
 
-        //instansfelter
-        private string _licensePlate;
-        private DateTime _date;
-
-        //properties
-        public string Licenseplate
-        {
-            get { return _licensePlate; }
-            set { _licensePlate = value; }
-        }
-
-        public DateTime Date
-        {
-            get { return _date; }
-            set { _date = value; }
-        }
-
-
+        
         /// <summary>
         /// Constructor for MC
         /// </summary>
         /// <param name="licensePlate"></param>
         /// <param name="date"></param>
-        public MC(string licensePlate, DateTime date)
+        public MC(string licensePlate, DateTime date): base(licensePlate, date) 
         {
-            _licensePlate = licensePlate;
-            _date = date;
         }
-
-
-
-
+        
         //Metoder
 
         /// <summary>
         /// Prismetode for MC.price
         /// </summary>
         /// <returns>125</returns>
-        public double Price()
+        public override double Price()
         {
             return 125.0;
         }
@@ -57,7 +35,7 @@ namespace TicketClassLibrary
         /// Returns vehicletype string
         /// </summary>
         /// <returns>"MC"</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "MC";
         }

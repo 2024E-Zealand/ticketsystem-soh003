@@ -17,7 +17,12 @@ namespace TicketClassLibrary
         public string LicensePlate
         {
             get { return _licensePlate; }
-            set { _licensePlate = value; }
+            set {
+                if(value.Length > 7)
+                {
+                    throw new ArgumentException("License plate cannot be longer than 7 characters.");
+                }
+                _licensePlate = value; }
         }
 
         public DateTime Date

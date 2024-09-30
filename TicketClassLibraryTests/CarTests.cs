@@ -96,7 +96,16 @@ namespace TicketClassLibrary.Tests
             Assert.AreNotEqual("Truck", vehicleType);
         }
 
-
+        /// <summary>
+        /// Tester her om validation af licenseplate kan oprette med mere end 7 karakterer
+        /// </summary>
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void CarInstans_NotOk()
+        {
+            //Arrange & Act
+            var car = new Car("12345678", DateTime.Now);
+        }
 
 
 

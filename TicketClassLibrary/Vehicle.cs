@@ -14,7 +14,7 @@ namespace TicketClassLibrary
         protected DateTime _date;
 
         //properties
-        public string Licenseplate
+        public string LicensePlate
         {
             get { return _licensePlate; }
             set { _licensePlate = value; }
@@ -26,11 +26,11 @@ namespace TicketClassLibrary
             set { _date = value; }
         }
 
-        //constructor for Vehicle klassen. Protected så de kun kan kaldes af de afledte klasser
+        //constructor for Vehicle klassen. Protected så de kun kan kaldes af de afledte klasser. Benytter properties til at oprette en enstans af klassen.
         protected Vehicle(string licensePlate, DateTime date)
         {
-            _licensePlate = licensePlate;
-            _date = date;
+            LicensePlate = licensePlate;
+            Date = date;
         }
 
         //Abstrakte metoder til override i chileklasserne

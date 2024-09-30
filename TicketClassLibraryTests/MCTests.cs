@@ -58,8 +58,23 @@ namespace TicketClassLibrary.Tests
 
             Assert.AreNotEqual(test_Pris, price);
 
-
         }
+
+        //BrobizzRabat test her
+        [TestMethod]
+        public void Rabat_Ok()
+        {
+            //Arrange
+            var mcWithBrobizz = new MC("ABC1234", DateTime.Now, true);
+
+            //Act
+            double price = mcWithBrobizz.Price();
+
+            //Assert
+            double expectedPrice = 125.0 * 0.95;
+            Assert.AreEqual(expectedPrice, price);
+        }
+
 
         /// <summary>
         /// Tester at Vehivletype sættes til MC

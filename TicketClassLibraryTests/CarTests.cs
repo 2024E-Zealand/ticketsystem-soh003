@@ -62,6 +62,23 @@ namespace TicketClassLibrary.Tests
 
         }
 
+
+        //BrobizzRabat test her
+        [TestMethod]
+        public void Rabat_Ok()
+        {
+            //Arrange
+            var carWithBrobizz = new Car("ABC1234", DateTime.Now, true);
+
+            //Act
+            double price = carWithBrobizz.Price();
+
+            //Assert
+            double expectedPrice = 240.0 * 0.95;
+            Assert.AreEqual(expectedPrice, price);
+        }
+
+
         /// <summary>
         /// Tester at tyoe sættes til Car
         /// </summary>

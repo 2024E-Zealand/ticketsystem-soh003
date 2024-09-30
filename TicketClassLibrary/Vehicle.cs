@@ -31,12 +31,33 @@ namespace TicketClassLibrary
             set { _date = value; }
         }
 
+
+        // Ny Brobizz property task 6
+        public bool Brobizz { get; set; }
+
+
         //constructor for Vehicle klassen. Protected så de kun kan kaldes af de afledte klasser. Benytter properties til at oprette en enstans af klassen.
         protected Vehicle(string licensePlate, DateTime date)
         {
             LicensePlate = licensePlate;
             Date = date;
         }
+
+        //Metode til at tildele brobizz rabat
+        /// <summary>
+        /// Tildeler rabat ved brobizz
+        /// </summary>
+        /// <param name="basePrice"></param>
+        /// <returns>Pris efter rabat</returns>
+        protected double ApplyBrobizzDiscount(double basePrice)
+        {
+            if(Brobizz)
+            {
+                return basePrice * 0.95; //Her 5% Rabat
+            }
+            return basePrice;
+        }
+
 
         //Abstrakte metoder til override i chileklasserne
         public abstract double Price();

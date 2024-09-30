@@ -15,8 +15,9 @@ namespace TicketClassLibrary
         /// </summary>
         /// <param name="licensePlate"></param>
         /// <param name="date"></param>
-        public MC(string licensePlate, DateTime date): base(licensePlate, date) 
+        public MC(string licensePlate, DateTime date, bool brobizz = false): base(licensePlate, date) 
         {
+            Brobizz = brobizz;
         }
         
         //Metoder
@@ -25,9 +26,11 @@ namespace TicketClassLibrary
         /// Prismetode for MC.price
         /// </summary>
         /// <returns>125</returns>
+        
         public override double Price()
         {
-            return 125.0;
+            double basePrice = 125.0;
+            return ApplyBrobizzDiscount(basePrice);//her gør vi brug af rabatmetode fra baseklassen
         }
 
 

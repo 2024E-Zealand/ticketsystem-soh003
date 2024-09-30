@@ -16,9 +16,9 @@ namespace TicketClassLibrary
         /// </summary>
         /// <param name="licenseplate"></param>
         /// <param name="date"></param>
-        public Car(string licensePlate, DateTime date): base(licensePlate, date)
+        public Car(string licensePlate, DateTime date, bool brobizz = false) : base(licensePlate, date)
         {
-           
+           Brobizz = brobizz;
         }
 
         // Methoder
@@ -28,7 +28,8 @@ namespace TicketClassLibrary
         /// <returns> 240 </returns>
         public override double Price()
         {
-            return 240.0;
+            double basePrice = 240.0;
+            return ApplyBrobizzDiscount(basePrice);//her gør vi brug af rabatmetode fra baseclassen
         }
 
         /// <summary>

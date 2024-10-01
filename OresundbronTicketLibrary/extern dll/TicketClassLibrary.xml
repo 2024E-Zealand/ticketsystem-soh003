@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TicketClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="M:TicketClassLibrary.Car.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Constructor til instancer af car med properties LicentePlate og date
+            </summary>
+            <param name="licenseplate"></param>
+            <param name="date"></param>
+        </member>
+        <member name="M:TicketClassLibrary.Car.Price">
+            <summary>
+            Prismetode for car.price
+            </summary>
+            <returns> 240 </returns>
+        </member>
+        <member name="M:TicketClassLibrary.Car.VehicleType">
+            <summary>
+            VehicleType metode for car.VehicleType
+            </summary>
+            <returns> Car </returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Constructor for MC
+            </summary>
+            <param name="licensePlate"></param>
+            <param name="date"></param>
+        </member>
+        <member name="M:TicketClassLibrary.MC.Price">
+            <summary>
+            Prismetode for MC.price
+            </summary>
+            <returns>125</returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.VehicleType">
+            <summary>
+            Returns vehicletype string
+            </summary>
+            <returns>"MC"</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.ApplyBrobizzDiscount(System.Double)">
+            <summary>
+            Tildeler rabat ved brobizz
+            </summary>
+            <param name="basePrice"></param>
+            <returns>Pris efter rabat</returns>
+        </member>
+    </members>
+</doc>

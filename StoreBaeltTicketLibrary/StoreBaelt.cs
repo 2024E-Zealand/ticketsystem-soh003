@@ -7,7 +7,7 @@ using TicketClassLibrary;
 
 namespace StoreBaeltTicketLibrary
 {
-    internal class StoreBaelt
+    public class StoreBaelt
     {
         public double StoreBaeltPrice(Vehicle v)
         {
